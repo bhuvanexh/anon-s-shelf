@@ -1,0 +1,139 @@
+.errorDivOuter {
+    padding-block: 100px 40px;
+}
+
+.errorDivInner {
+    background-color: rgba(50, 2, 38, 0.548);
+    backdrop-filter: blur(5px);
+    width: 60%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5px;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.errorImg {
+    width: 80%;
+}
+
+.errorText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.errorText h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.errorText p {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(251, 251, 155);
+}
+
+
+.errorText button {
+    margin-top: 5px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgba(112, 8, 8, 0.678);
+    transition: transform ease .4s;
+}
+
+.errorText button:hover {
+    background-color: rgb(205, 7, 7);
+    transform: scale(1.05);
+}
+
+@media(max-width: 1000px) {
+    .errorDivOuter {
+        padding-top: 80px;
+    }
+
+    .errorDivInner {
+        width: 70%;
+    }
+
+    .errorImg {
+        width: 90%;
+    }
+
+    .errorText h1 {
+        font-size: 35px;
+    }
+
+    .errorText button {
+        width: 180px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 750px) {
+    .errorDivInner {
+        width: 80%;
+        padding-inline: 10px;
+    }
+
+    .errorImg {
+        width: 100%;
+    }
+
+    .errorText h1 {
+        font-size: 28px;
+    }
+
+    .errorText p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 500px) {
+    .errorDivInner {
+        width: 90%;
+    }
+
+    .errorText h1 {
+        font-size: 22px;
+    }
+
+    .errorText p {
+        font-size: 13px;
+    }
+
+    .errorText button {
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 350px) {
+    .errorDivInner {
+        width: 95%;
+        padding-inline: 7px;
+    }
+
+    .errorText h1 {
+        font-size: 18px;
+    }
+
+    .errorText p {
+        font-size: 11px;
+    }
+
+    .errorText button {
+        width: 140px;
+        height: 25px;
+        font-size: 13px;
+    }
+}

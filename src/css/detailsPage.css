@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&family=Poppins:wght@300;400;500&family=Roboto&display=swap');
+
+
+.contentDetailsPage {
+    padding: 80px 10px 30px;
+}
+
+.contentDetailsPage>a {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.CDPinner {
+    padding: 140px 0px 60px;
+}
+
+.detailsWrapper {
+    margin-inline: auto;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    width: 75%;
+    background-color: rgba(151, 159, 252, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+}
+
+.posterImg {
+    display: flex;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.posterImg img {
+    border-radius: 5px;
+}
+
+.movieDetails {
+    background: linear-gradient(to bottom, rgba(1, 1, 28, 0.886), rgba(56, 9, 65, 0.754));
+    width: 70%;
+    display: flex;
+    padding: 20px 15px;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.mdInner {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.movieDetails h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: .95;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+.movieDetails p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.movieDetails p:nth-of-type(2) {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 194, 133);
+}
+
+.mdGenre {
+    display: flex;
+    gap: 10px;
+    color: rgb(253, 159, 255);
+    font-size: 18px;
+    align-items: center;
+}
+
+.mdGenre span:nth-of-type(1) {
+    color: rgb(92, 89, 89);
+    font-style: italic;
+    font-size: 15px;
+}
+
+.movieDetails p:nth-of-type(1) {
+    font-size: 15px;
+    color: gainsboro;
+}
+
+.md-row {
+    display: flex;
+}
+
+.md-row2 {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: rgb(192, 220, 245);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.md-row2 span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+}
+
+.md-row2 span span {
+    bottom: 2px;
+    color: yellow;
+    position: relative;
+}
+
+
+
+
+h3 {
+    width: max-content;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid;
+}
+
+.md-row1 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trailerBtn {
+    margin-inline: auto;
+    width: 30%;
+    padding: 10px 0;
+    background-color: rgba(110, 12, 12, 0.773);
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    box-shadow: 0px 1px 4px rgb(11, 114, 95);
+    transition: transform ease .3s, background-color ease .3s;
+}
+
+.trailerBtn:hover {
+    background-color: rgba(181, 20, 84, 0.773);
+    transform: scale(1.1);
+}
+
+.heart {
+    width: 10%;
+}
+
+.likeBtn2 {
+    display: block;
+    stroke: white;
+    stroke-width: 15;
+    fill: rgba(218, 201, 201, 0.397);
+    cursor: pointer;
+}
+
+.active2 {
+    animation: like 0.5s 1;
+    fill: rgba(255, 0, 0, 0.753);
+    transform: scale(1.1);
+    stroke-width: 0;
+}
+
+
+
+
+
+@media(max-width:1200px) {
+    .detailsWrapper {
+        width: 85%;
+    }
+
+    .movieDetails h1 {
+        font-size: 45px;
+    }
+
+    .movieDetails p:nth-of-type(2) {
+        font-size: 20px;
+    }
+
+    .mdGenre {
+        font-size: 16px;
+    }
+
+    .md-row2 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .movieDetails p:nth-of-type(1) {
+        font-size: 14px;
+    }
+
+    .trailerBtn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:1030px) {
+    .detailsWrapper {
+        width: 90%;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .movieDetails {
+        padding: 15px 10px;
+    }
+
+    .movieDetails h1 {
+        font-size: 35px;
+        line-height: 1.05;
+    }
+
+    .movieDetails p {
+        margin-bottom: 7px;
+    }
+
+    .movieDetails p:nth-of-type(2) {
+        font-size: 18px;
+    }
+
+    .mdGenre {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .mdGenre span:nth-of-type(1) {
+        font-size: 12px;
+    }
+
+    .md-row2 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .movieDetails p:nth-of-type(1) {
+        font-size: 13px;
+    }
+
+    .trailerBtn {
+        margin-top: 5px;
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+
+@media(max-width:750px) {
+    .detailsWrapper {
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 220px;
+    }
+
+    .posterImg {
+        width: 100%;
+    }
+
+    .movieDetails {
+        position: absolute;
+        width: 95%;
+        bottom: 5px;
+        padding-block: 20px 10px;
+    }
+
+    .trailerBtn {
+        width: 35%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:550px) {
+    .contentDetailsPage {
+        padding: 60px 10px 30px;
+    }
+
+    .contentDetailsPage>a {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .detailsWrapper {
+        width: 80%;
+    }
+
+    .movieDetails {
+        padding-block: 20px 10px;
+    }
+
+    .movieDetails h1 {
+        font-size: 25px;
+    }
+
+    .movieDetails p {
+        margin-bottom: 5px;
+    }
+
+    .movieDetails p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+    .mdGenre {
+        font-size: 14px;
+    }
+
+    .mdGenre span:nth-of-type(1) {
+        font-size: 12px;
+    }
+
+    .md-row2 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .movieDetails p:nth-of-type(1) {
+        font-size: 12px;
+    }
+
+    .trailerBtn {
+        width: 40%;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:400px) {
+    .detailsWrapper {
+        width: 90%;
+    }
+
+    .movieDetails {
+        padding: 20px 5px 10px;
+    }
+
+    .movieDetails h1 {
+        font-size: 20px;
+    }
+
+    .movieDetails p {
+        margin-bottom: 2px;
+    }
+
+    .movieDetails p:nth-of-type(2) {
+        font-size: 12px;
+    }
+
+    .mdGenre {
+        font-size: 11px;
+    }
+
+    .mdGenre span:nth-of-type(1) {
+        font-size: 10px;
+    }
+
+    .md-row2 {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+
+    .movieDetails p:nth-of-type(1) {
+        font-size: 11px;
+    }
+
+    .trailerBtn {
+        width: 45%;
+        font-size: 12px;
+        padding-inline: 5px;
+    }
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+.loadingMain {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(23, 3, 18, 0.783);
+    backdrop-filter: blur(3px);
+    display: grid;
+    place-items: center;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+.loading-outer {
+    background-color: rgba(17, 9, 49, 0.454);
+    display: flex;
+    flex-direction: column-reverse;
+    width: 25%;
+    margin-inline: auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.loading-text {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loading-text span {
+    display: inline-block;
+    font-size: 40px;
+}
+
+.loading-text span:nth-of-type(1) {
+    animation: loading1 1.5s linear 0s infinite;
+}
+
+
+.loading-text span:nth-of-type(2) {
+    animation: loading2 1.5s linear 0s infinite;
+}
+
+
+.loading-text span:nth-of-type(3) {
+    animation: loading3 1.5s linear 0s infinite;
+}
+
+.loading-text h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+@keyframes loading1 {
+
+    0%,
+    23% {
+        opacity: 0;
+    }
+
+    24%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading2 {
+
+    0%,
+    45% {
+        opacity: 0;
+    }
+
+    46%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading3 {
+
+    0%,
+    76% {
+        opacity: 0;
+    }
+
+    77%,
+    100% {
+        opacity: 1;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 84.25%;
+    margin-inline: auto;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&family=Roboto&display=swap');
+
+.dataCard {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.likedCard {
+    box-shadow: 0px 0px 8px rgba(101, 7, 7, 0.434);
+}
+
+.dataCard img {
+    /* width: 100%; */
+    /* height: 100%; */
+    transition: all .5s ease-in-out;
+}
+
+.hiddenOverlay {
+    padding: 5px;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    background-color: rgba(18, 3, 33, 0.842);
+    backdrop-filter: blur(3px);
+    transition: all .5s ease-in-out;
+}
+
+.dataCard--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.dataCard--content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    width: 95%;
+    color: rgb(248, 192, 255);
+}
+
+.dataCard--content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    line-height: 1.3;
+    color: white;
+}
+
+.dataCard:hover .hiddenOverlay {
+    bottom: 0;
+}
+
+.dataCard:hover .primary {
+    bottom: -100px;
+}
+
+.dataCard:hover img {
+    transform: scale(1.1);
+}
+
+.dataCard--btns {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.dataCard--btns button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: rgb(32, 0, 56);
+    color: aliceblue;
+    width: 45%;
+    padding-block: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform ease .3s;
+}
+
+.dataCard--btns button:hover {
+    background-color: rgba(52, 5, 87, 0.8);
+    transform: scale(1.1);
+}
+
+.primary {
+    padding-block: 7px;
+    font-size: 25px;
+    line-height: 1.3;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(17, 2, 33, 0.711);
+    text-align: center;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    transition: all .5s ease-out;
+    backdrop-filter: blur(5px);
+}
+
+.activePrimary {
+    color: #ff5757;
+    background-color: rgba(17, 2, 33, 0.711);
+}
+
+.likeBtn {
+    width: 15%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    stroke: white;
+    stroke-width: 15;
+    fill: rgba(218, 201, 201, 0.397);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.active {
+    animation: like 0.5s 1;
+    fill: rgba(255, 0, 0, 0.753);
+    stroke-width: 0;
+}
+
+
+@keyframes like {
+    0% {
+        transform: scale(1);
+    }
+
+
+    90% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@media(max-width:1300px) {
+
+    .hiddenOverlay p {
+        font-size: 13px;
+        width: 95%;
+    }
+
+    .hiddenOverlay h2 {
+        font-size: 20px;
+    }
+
+    .primary {
+        padding-block: 5px;
+        font-size: 20px;
+    }
+
+    .dataCard button {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width:800px) {
+    .likeBtn {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@media(max-width:650px) {
+    .hiddenOverlay p {
+        font-size: 2.6vw;
+    }
+
+    .hiddenOverlay h2,
+    .primary {
+        font-size: 3.8vw;
+    }
+
+    .dataCard button {
+        font-size: 2.8vw;
+    }
+}
+
+@media(max-width:550px) {
+    .dataCard--content {
+        gap: 8px;
+    }
+
+    .hiddenOverlay {
+        gap: 8px;
+    }
+
+    .hiddenOverlay p {
+        width: 100%;
+    }
+
+    .primary {
+        padding-block: 3px;
+    }
+}
+
+@media(max-width:450px) {
+    .dataCard--content {
+        gap: 5px;
+    }
+
+    .dataCard button {
+        padding-block: 5px;
+    }
+}

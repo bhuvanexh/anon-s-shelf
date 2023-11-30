@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+.navbar--top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    padding: 20px 0;
+    background-color: rgba(32, 3, 70, 0.352);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar--top a,
+.signOutBtn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    transition: transform ease .4s;
+    padding-bottom: 3px;
+}
+
+.navbar--top a:hover,
+.signOutBtn:hover {
+    transform: scale(1.05);
+}
+
+
+.navbar--top a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(234, 214, 214, 0.785);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform .5s ease-in-out;
+}
+
+.navbar--top a:hover::after {
+    transform: scaleX(1);
+}
+
+
+@media(max-width:800px) {
+    .navbar--top {
+        gap: 30px;
+        padding: 15px 0;
+    }
+
+    .navbar--top a {
+        font-size: 19px;
+    }
+}
+
+@media(max-width:550px) {
+    .navbar--top {
+        gap: 25px;
+    }
+
+    .navbar--top a,
+    .signOutBtn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:450px) {
+    .navbar--top {
+        gap: 20px;
+    }
+
+    .navbar--top a,
+    .signOutBtn {
+        font-size: 13px;
+    }
+}
+
+@media(max-width:350px) {
+    .navbar--top {
+        gap: 15px;
+    }
+
+    .navbar--top a,
+    .signOutBtn {
+        font-size: 12px;
+    }
+}

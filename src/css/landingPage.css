@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+.LP--upper {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('../assets/room.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+.focus-in-expand {
+    color: #4A90E2;
+    font-size: 80px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+    animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+
+    text-shadow: 3px 3px 6px rgba(18, 0, 91, 0.945);
+}
+
+.LPup--btn a {
+    display: grid;
+    place-items: center;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to left, #11103d, #3b1332);
+    border: 2px solid #3694ff;
+    color: #5ddcff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(75, 9, 156, 0.9);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.LPup--btn a:hover {
+    background: linear-gradient(to left, #a3a2ff, #b923f0);
+    color: #fff;
+    border: 2px solid #58dfcf;
+    transform: scale(1.05);
+}
+
+
+
+@-webkit-keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(7px);
+        filter: blur(7px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(7px);
+        filter: blur(7px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+
+/* *************** */
+.LP--lower {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.LPlower--cardOuter {
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LPlower--cardOuter>div {
+    width: 700px;
+    text-align: center;
+    background: linear-gradient(135deg, #050e1d74, #01182f61);
+    border-radius: 10px;
+    box-shadow: 2 4px 16px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.LPlower--hero {
+    width: 80%;
+}
+
+.LPlower--card h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.LPlower--card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #c9d1e8;
+    line-height: 1.5;
+    padding-inline: 15px;
+}
+
+.LPlower--cardOuter button {
+    width: 200px;
+    height: 45px;
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to left, #275367, #190a40);
+    border: 2px solid #8acffd;
+    color: #dafeff;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.LPlower--cardOuter button:hover {
+    background: linear-gradient(to left, #706ede, #6a0b8d);
+    color: #fff;
+    border: 2px solid #58dfcf;
+    transform: scale(1.05);
+}
+
+/* bg slider */
+.bgSliding-wrapper {
+    margin-top: 25px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.sliding-background {
+    background-image: url('../assets/movieReelFin.webp');
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 450px;
+    width: 7000px;
+    animation: slide1 75s linear infinite;
+}
+
+@keyframes slide1 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-3966.2px, 0, 0);
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-3180.34px, 0, 0);
+    }
+}
+
+@keyframes slide3 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-2645.65px, 0, 0);
+    }
+}
+
+@keyframes slide4 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-2289.86px, 0, 0);
+    }
+}
+
+@media(max-width:1000px) {
+    .sliding-background {
+        height: 360px;
+        animation: slide2 75s linear infinite;
+    }
+
+
+
+    /* upper */
+
+    .focus-in-expand {
+        font-size: 65px;
+    }
+
+    .LPup--btn a {
+        font-size: 22px;
+        width: 210px;
+        height: 57px;
+    }
+
+    /* lower */
+    .LPlower--hero {
+        width: 90%;
+    }
+
+    .LPlower--cardOuter>div {
+        width: 500px;
+        padding: 15px;
+    }
+
+    .LPlower--card h1 {
+        font-size: 23px;
+    }
+
+    .LPlower--card p {
+        font-size: 15px;
+        padding-inline: 10px;
+    }
+
+    .LPlower--cardOuter button {
+        width: 180px;
+        height: 45px;
+        font-size: 17px;
+    }
+
+
+
+}
+
+@media(max-width:700px) {
+    .sliding-background {
+        height: 300px;
+        animation: slide3 75s linear infinite;
+    }
+
+
+    /* upper */
+
+    .focus-in-expand {
+        font-size: 55px;
+    }
+
+    .LPup--btn a {
+        font-size: 20px;
+        width: 200px;
+        height: 53px;
+    }
+
+    /* lower */
+
+    .LPlower--cardOuter>div {
+        width: 60%;
+        min-width: 350px;
+        padding: 10px;
+    }
+
+    .LPlower--card h1 {
+        font-size: 18px;
+    }
+
+    .LPlower--card p {
+        font-size: 13px;
+        padding-inline: 10px;
+    }
+
+    .LPlower--cardOuter button {
+        width: 140px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .sliding-background {
+        height: 320px;
+        animation: slide4 75s linear infinite;
+    }
+
+    /* upper */
+    .focus-in-expand {
+        font-size: 50px;
+        padding: 15px;
+    }
+
+    .LPup--btn a {
+        font-size: 24px;
+        width: 190px;
+        height: 50px;
+    }
+
+    /* lower */
+
+    .LPlower--cardOuter>div {
+        width: 75%;
+        min-width: 250px;
+        padding: 10px 5px;
+    }
+
+    .LPlower--card h1 {
+        font-size: 14px;
+    }
+
+    .LPlower--card p {
+        font-size: 11px;
+        padding-inline: 5px;
+    }
+
+    .LPlower--cardOuter button {
+        width: 120px;
+        height: 35px;
+        font-size: 13px;
+    }
+}
+
+@media(max-width:360px) {
+
+    /* upper */
+    .focus-in-expand {
+        font-size: 37px;
+    }
+
+    .LPup--btn a {
+        font-size: 20px;
+        width: 180px;
+        height: 45px;
+    }
+}

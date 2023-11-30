@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+.secNavbar {
+    padding-top: 80px;
+    margin-bottom: 30px;
+}
+
+.secNavbar>a {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 20px 15px;
+}
+
+.secNavbar nav {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.secNavbar nav a {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    transition: transform ease .4s;
+}
+
+.secNavbar nav a:hover {
+    transform: scale(1.05);
+}
+
+
+.secNavbar nav a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(234, 214, 214, 0.785);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform .5s ease-in-out;
+}
+
+.secNavbar nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+.movies--filter>button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    background-color: rgb(91, 5, 78);
+    border-radius: 8px;
+    padding-block: 8px;
+    width: 150px;
+    margin: 0 0 15px 10px;
+}
+
+.filterBtn--wrapper {
+    width: 70%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 10px;
+}
+
+.filterBtn--wrapper button {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    font-size: 15px;
+    padding: 8px 2px;
+    background-color: rgb(63, 2, 50);
+}
+
+
+
+
+
+.watchlistHeading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+.anonPickInfo {
+    color: rgb(237, 226, 226);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+
+
+
+
+.switchWrapper {
+    display: flex;
+    justify-content: center;
+    padding-block: 15px;
+    align-items: center;
+    gap: 20px;
+}
+
+.switchWrapper>span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(159, 217, 255);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.toggle-switch input[type="checkbox"]:checked+.slider {
+    background-color: #2196F3;
+}
+
+.toggle-switch .slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.toggle-switch input[type="checkbox"]:checked+.slider::before {
+    transform: translateX(30px);
+}
+
+
+
+
+.page--SMbtn {
+    margin: 10px auto 0;
+    display: block;
+    width: 150px;
+    padding-block: 10px;
+    border-radius: 8px;
+    background-color: rgb(104, 4, 89);
+    font-size: 18px;
+}
+
+@media(max-width:1200px) {
+    .watchlistHeading {
+        font-size: 40px;
+    }
+
+    .anonPickInfo {
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:1000px) {
+    .secNavbar>a {
+        font-size: 17px;
+        margin: 0 0 15px 10px;
+    }
+
+    .secNavbar nav {
+        gap: 40px;
+    }
+
+    .secNavbar nav a {
+        font-size: 22px;
+    }
+
+
+
+
+    .movies--filter>button {
+        font-size: 16px;
+        width: 130px;
+    }
+
+    .filterBtn--wrapper {
+        width: 85%;
+    }
+
+    .filterBtn--wrapper button {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:750px) {
+    .watchlistHeading {
+        font-size: 35px;
+    }
+
+    .anonPickInfo {
+        font-size: 15px;
+    }
+
+
+
+
+    .secNavbar {
+        padding-top: 70px;
+    }
+
+    .secNavbar>a {
+        font-size: 15px;
+    }
+
+    .secNavbar nav {
+        gap: 30px;
+    }
+
+    .secNavbar nav a {
+        font-size: 20px;
+    }
+
+
+    .movies--filter>button {
+        font-size: 14px;
+        width: 110px;
+    }
+
+    .filterBtn--wrapper {
+        width: 95%;
+        column-gap: 12px;
+    }
+
+    .filterBtn--wrapper button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .switchWrapper>span {
+        font-size: 17px;
+    }
+
+    .toggle-switch {
+        width: 50px;
+        height: 26px;
+    }
+
+    .toggle-switch .slider::before {
+        height: 23px;
+        width: 23px;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked+.slider::before {
+        transform: translateX(23px);
+    }
+
+
+    .page--SMbtn {
+        width: 30%;
+        padding-block: 7px;
+        font-size: 4vw;
+    }
+}
+
+@media(max-width:650px) {
+
+    .watchlistHeading,
+    .anonPickInfo {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width:550px) {
+    .watchlistHeading {
+        font-size: 30px;
+    }
+
+    .anonPickInfo {
+        font-size: 14px;
+    }
+
+
+
+
+    .secNavbar>a {
+        font-size: 13px;
+    }
+
+    .secNavbar nav {
+        gap: 25px;
+    }
+
+    .secNavbar nav a {
+        font-size: 17px;
+    }
+
+
+    .movies--filter>button {
+        font-size: 3.5vw;
+        padding-block: 5px;
+        width: 20%;
+    }
+
+    .filterBtn--wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filterBtn--wrapper button {
+        font-size: 3vw;
+        padding: 5px 2px;
+    }
+
+    .switchWrapper>span {
+        font-size: 15px;
+    }
+
+    .switchWrapper {
+        gap: 15px;
+    }
+
+    .toggle-switch {
+        width: 45px;
+        height: 24px;
+    }
+
+    .toggle-switch .slider::before {
+        height: 21px;
+        width: 21px;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked+.slider::before {
+        transform: translateX(21px);
+    }
+}
+
+@media(max-width:450px) {
+
+
+
+
+
+    .watchlistHeading {
+        font-size: 25px;
+    }
+
+    .anonPickInfo {
+        font-size: 12px;
+    }
+
+
+    .secNavbar {
+        margin-bottom: 20px;
+    }
+
+    .secNavbar>a {
+        font-size: 11px;
+    }
+
+    .secNavbar nav {
+        gap: 3.5%;
+    }
+
+    .secNavbar nav a {
+        font-size: 14px;
+    }
+
+    .switchWrapper>span {
+        font-size: 3.7vw;
+    }
+
+    .switchWrapper {
+        gap: 10px;
+    }
+
+    .toggle-switch {
+        width: 35px;
+        height: 20px;
+    }
+
+    .toggle-switch .slider::before {
+        height: 18px;
+        width: 18px;
+        left: 1px;
+        bottom: 1px;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked+.slider::before {
+        transform: translateX(15px);
+    }
+}
+
+@media(max-width:350px) {
+    .watchlistHeading {
+        font-size: 23px;
+    }
+
+    .anonPickInfo {
+        font-size: 11px;
+    }
+
+
+
+    .secNavbar nav {
+        gap: 3.5%;
+    }
+
+    .secNavbar nav a {
+        font-size: 12px;
+    }
+}
